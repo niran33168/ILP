@@ -1,0 +1,26 @@
+{
+    "Login": {
+        "Username": "",
+        "Password": ""
+    },
+    "Menu": "",
+    "Search": "",
+    "InsuredInformation": {
+        "Name": "",
+        "Lastname": "",
+        "Gender": "",
+        "Age": "",
+        "Occupation": ""
+    },
+    "PayerInformation": {
+        "Name": "",
+        "Lastname": "",
+        "Gender": "",
+        "Age": "",
+        "Occupation": ""
+    },
+    "Contract": "",
+    "Basiclist": "",
+    "SelectBasiclist": "",
+    "Suminsured": ""
+}

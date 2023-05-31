@@ -1,0 +1,72 @@
+{
+    "Data": [
+        {
+            "GalaxyTabS6": [
+                {
+                    "platformName": "Android",
+                    "platformVersion": "11",
+                    "deviceName": "R52M80XH5TV",
+                    "automationName": "UiAutomator2",
+                    "IPAppium": "localhost:4723",
+                    "appPackage": "com.tokiomarine.fasttrack.ilp",
+                    "appActivity": "com.tokiomarine.fasttrack.MainActivity",
+                    "noReset": "true",
+                    "unicodeKeyboard": "true",
+                    "newCommandTimeout": "3000",
+                    "deviceStatus": "Online"
+                }
+            ]
+        },
+        {
+            "GalaxyTabS6Lite": [
+                {
+                    "platformName": "Android",
+                    "platformVersion": "11",
+                    "deviceName": "R52N70B1R9B",
+                    "automationName": "UiAutomator2",
+                    "IPAppium": "localhost:4723",
+                    "appPackage": "com.tokiomarine.fasttrack.gb",
+                    "appActivity": "com.tokiomarine.fasttrack.MainActivity",
+                    "noReset": "true",
+                    "unicodeKeyboard": "true",
+                    "newCommandTimeout": "3000",
+                    "deviceStatus": "Online"
+                }
+            ]
+        },
+        {
+            "Emulator": [
+                {
+                    "platformName": "Android",
+                    "platformVersion": "10",
+                    "deviceName": "emulator-5554",
+                    "automationName": "UiAutomator2",
+                    "IPAppium": "localhost:4723",
+                    "appPackage": "com.tokiomarine.fasttrack.gb",
+                    "appActivity": "com.tokiomarine.fasttrack.MainActivity",
+                    "noReset": "true",
+                    "unicodeKeyboard": "true",
+                    "newCommandTimeout": "3000",
+                    "deviceStatus": "Online"
+                }
+            ]
+        },
+        {
+            "EmulatorILP": [
+                {
+                    "platformName": "Android",
+                    "platformVersion": "10",
+                    "deviceName": "emulator-5554",
+                    "automationName": "UiAutomator2",
+                    "IPAppium": "localhost:4723",
+                    "appPackage": "com.tokiomarine.fasttrack.ilp",
+                    "appActivity": "com.tokiomarine.fasttrack.MainActivity",
+                    "noReset": "true",
+                    "unicodeKeyboard": "true",
+                    "newCommandTimeout": "3000",
+                    "deviceStatus": "Online"
+                }
+            ]
+        }
+    ]
+}

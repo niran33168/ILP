@@ -1,0 +1,21 @@
+*** Settings ***
+Library           AppiumLibrary
+Library           Collections
+Library           String
+Library           BuiltIn
+Library           OperatingSystem
+Library           DateTime
+Library           ../Library/ExcelLibraryV2.py
+Library           JSONLibrary
+Resource          ../Variables/GlobalConfig.robot
+Resource          ../Variables/LocalConfig.robot
+Resource          ../Variables/MobileConfig.robot
+Resource          Common_Keyword/ExcelKeyword.robot
+Resource          Common_Keyword/CommonKeyword.robot
+Resource          Mobile_Keyword/MobilerepareDataKeyword.robot
+Resource          Mobile_Keyword/MobileCommonKeyword.robot
+Resource          Mobile_Keyword/MobileLoginKeyword.robot
+Resource          Mobile_Keyword/MobileQuotataionKeyword.robot
+Resource          Mobile_Keyword/MobileApplication.robot
+Resource          Mobile_Keyword/MobilePayment.robot
+Resource          Mobile_Keyword/MobileFlow.robot
