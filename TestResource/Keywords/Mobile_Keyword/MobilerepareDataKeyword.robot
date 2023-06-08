@@ -55,6 +55,45 @@ PrepareDataQuotation
     Run Keyword If           '${Test_Data['PayerInformation.Occupation']}'!='empty'            set to dictionary                   ${json['PayerInformation']}                 Occupation=${Test_Data['PayerInformation.Occupation']}
     Run Keyword If           '${Test_Data['PayerInformation.Occupation']}'=='missing'          Delete Object From Json             ${json['PayerInformation']}                 $..PayerInformation.Occupation
 
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo=${Test_Data['Quiz.QuizFromNo']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo
+
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo1']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo1=${Test_Data['Quiz.QuizFromNo1']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo1']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo1
+
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo2']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo2=${Test_Data['Quiz.QuizFromNo2']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo2']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo2
+
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo3']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo3=${Test_Data['Quiz.QuizFromNo3']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo3']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo3
+
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo4']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo4=${Test_Data['Quiz.QuizFromNo4']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo4']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo4
+
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo5']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo5=${Test_Data['Quiz.QuizFromNo5']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo5']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo5
+ 
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo6']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo6=${Test_Data['Quiz.QuizFromNo6']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo6']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo6
+
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo7']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo7=${Test_Data['Quiz.QuizFromNo7']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo7']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo7
+
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo8']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo8=${Test_Data['Quiz.QuizFromNo8']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo8']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo8
+
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo9']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo9=${Test_Data['Quiz.QuizFromNo9']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo9']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo9
+
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo10']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo10=${Test_Data['Quiz.QuizFromNo10']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo10']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo10
+
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo11']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo11=${Test_Data['Quiz.QuizFromNo11']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo11']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo11
+
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo12']}'!='empty'                          set to dictionary                   ${json['Quiz']}                             QuizFromNo12=${Test_Data['Quiz.QuizFromNo12']}
+    Run Keyword If           '${Test_Data['Quiz.QuizFromNo12']}'=='missing'                        Delete Object From Json             ${json['Quiz']}                             $..Quiz.QuizFromNo12
+
     ${json_string}=          evaluate                                                          json.dumps(${json})                 json
     log many                 ${json_string}
     ${json_object}           Convert String to JSON                                            ${json_string}

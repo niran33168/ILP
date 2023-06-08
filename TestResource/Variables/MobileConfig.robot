@@ -1,42 +1,43 @@
 *** Variables ***
 @{devicesName}                        GalaxyTabS6                                                                                                                                                                                                                                                                                                                                                                         GalaxyTabS6Lite                                                                                                                                                                                                                                        Emulator
 ${JsonfilePath}                       TestResource/DataTest/Data_Json/Mobile.json
-&{AppPackage}                         android=com.tokiomarine.fasttrack.ilp                                                                                                                                                                                                                                                                                                                                               memo=com.tokiomarine.fasttrack.memo
-${AppActivity}                        com.tokiomarine.fasttrack.MainActivity
 
-${ANDROID_AUTOMATIONNAME}             UIAutomator2
-${ANDROID_PLATFORMNAME}               Android
-${ANDROID_PLATFORMVERSION}            11
-${ANDROID_DEVICENAME}                 R52N70B1R9B
 
 #### Locator Android ####
 &{PICTURE_PERMISSION}                 android=//android.widget.Button[1]
 &{LOCATION_PERMISSION}                android=//android.widget.Button[1]
 &{PHOTO_PERMISSION}                   android=//android.widget.Button[1]
 &{FILE_PERMISSION}                    android=//android.widget.Button[1]
+
 &{MOBILE_TXT_DISCLAIMER}              android=//android.widget.TextView[@text='Disclaimer']
+&{MOBILE_TXT_MENU}                    android=//android.widget.TextView[@text='ประกันชีวิตควบการลงทุน']
+
 &{BTN_OK_MOBILE}                      android=//android.view.View[@content-desc="ตกลง"]
-&{TXT_USERNAME_MOBILE}                android=//android.view.View[1]/android.widget.EditText                                                                                                                                                                                                                                                                                                                              memo=//android.view.View[1]/android.widget.EditText
-&{TXT_PASSWORD_MOBILE}                android=//android.view.View[2]/android.widget.EditText                                                                                                                                                                                                                                                                                                                              memo=//android.view.View[2]/android.widget.EditText
+&{TXT_USERNAME_MOBILE}                android=//android.view.View[1]/android.widget.EditText
+&{TXT_PASSWORD_MOBILE}                android=//android.view.View[2]/android.widget.EditText
 &{BTN_LOGIN_MOBILE}                   android=//android.view.View[@content-desc="Login"]
-
-&{BTN_CONFIRM_MOBILE}                 android=//android.widget.FrameLayout[@resource-id='android:id/content']
+&{BTN_CONFIRM_MOBILE}                 android=//android.widget.FrameLayout[@resource-id='ilp:id/content']
 &{TXT_PASSCODE}                       android=//android.widget.TextView[@resource-id='com.tokiomarine.fasttrack.ilp:id/passcodelock_title']
-&{BTN_NUMBER_1}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button1']                                                                                                                                                                                                                                                                                            memo=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.memo:id/button1']
-&{BTN_NUMBER_2}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button2']                                                                                                                                                                                                                                                                                            memo=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.memo:id/button2']
-&{BTN_NUMBER_3}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button3']                                                                                                                                                                                                                                                                                            memo=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.memo:id/button3']
-&{BTN_NUMBER_4}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button4']                                                                                                                                                                                                                                                                                            memo=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.memo:id/button4']
-&{BTN_NUMBER_5}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button5']                                                                                                                                                                                                                                                                                            memo=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.memo:id/button5']
-&{BTN_NUMBER_6}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button6']                                                                                                                                                                                                                                                                                            memo=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.memo:id/button6']
-&{BTN_NUMBER_7}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button7']                                                                                                                                                                                                                                                                                            memo=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.memo:id/button7']
-&{BTN_NUMBER_8}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button8']                                                                                                                                                                                                                                                                                            memo=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.memo:id/button8']
-&{BTN_NUMBER_9}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button9']                                                                                                                                                                                                                                                                                            memo=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.memo:id/button9']
-&{BTN_NUMBER_0}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button0']                                                                                                                                                                                                                                                                                            memo=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.memo:id/button0']
-&{BTN_OK_PASSCODE}                    android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/passcode_confirm_btn']                                                                                                                                                                                                                                                                               memo=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.memo:id/passcode_confirm_btn']
+&{BTN_NUMBER_1}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button1']
+&{BTN_NUMBER_2}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button2']
+&{BTN_NUMBER_3}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button3']
+&{BTN_NUMBER_4}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button4']
+&{BTN_NUMBER_5}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button5']
+&{BTN_NUMBER_6}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button6']
+&{BTN_NUMBER_7}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button7']
+&{BTN_NUMBER_8}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button8']
+&{BTN_NUMBER_9}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button9']
+&{BTN_NUMBER_0}                       android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/button0']
+&{BTN_OK_PASSCODE}                    android=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/passcode_confirm_btn']
 
+&{TXT_POPUP_APPLICATION}              android=//android.webkit.WebView/android.view.View
+&{TXT_TITLE_QUOTATION_MOBILE}         android=//android.view.View[@content-desc="ILP E-Quotation สร้างใบเสนอขายแบบประกันชีวิตควบการลงทุน"]
 &{TXT_TITLE_APPLICATION_MOBILE}       android=//android.view.View[@content-desc="ILP E-Application สร้างใบคำขอผลิตภัณฑ์ประกันชีวิตควบการลงทุน"]
 
-&{BTN_CREATE_APPLICATION_MOBILE}      android=//android.widget.TextView[@text='สร้างใบคำขอใหม่']
+&{BTN_CREATE_APPLICATION_MOBILE}      android=//android.widget.TextView[@text='สร้างใบคำขอ']
+${BTN_CREATE_QUOTATION_MOBILE}        xpath=//android.widget.TextView[@text='สร้างใบเสนอขายใหม่']
+${BTN_CONFIRM_INTERESTED_MOBILE}      xpath=//android.app.Dialog[@resource-id='dialog-confirm-interested-product']
+
 ${TXT_PATH_MENU}                      //android.view.View[2]/android.view.View[1]/android.view.View[2]
 ${TXT_PATH_MENU_SIMU}                 //android.view.View[2]/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View[5]
 
@@ -49,12 +50,14 @@ ${TXT_PATH_MENU_SIMU}                 //android.view.View[2]/android.view.View/a
 ${TXT_SECTION7}                       xpath=${TXT_PATH_MENU}/android.view.View[7]/android.view.View[1]
 &{TXT_SUBSECTION2}                    android=//android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.widget.TextView[1]                                                                                                                                                                                 memo=${TXT_PATH_MENU_SIMU}/android.view.View[2]/android.view.View[2]/android.view.View
 
-&{TXT_IMPORTANTMOBILE}                android=//android.widget.TextView[@text='ที่ต้องตอบ']
+${TXT_LIFEMOBILE}                     xpath=//android.view.View[@resource-id='quotation-info']/android.view.View[2]/android.view.View[2]
+${TXT_ACCIDENTMOBILE}                 xpath=//android.view.View[@resource-id='quotation-info']/android.view.View[2]/android.view.View[3]
+&{TXT_IMPORTANTMOBILE}                android=//android.widget.TextView[@text='ที่ต้องตอบ']                                                                                                                                                                                                                                                                                                                               memo=//android.view.View[@text='ที่ต้องตอบ']
 ${BTN_F2FMOBILE}                      xpath=//android.view.View/android.widget.Button[@text='ขายแบบพบหน้า']
 ${BTN_NONF2FMOBILE}                   xpath=//android.view.View/android.widget.Button[@text='ขายแบบไม่พบหน้า']
-&{DDL_DOCMOBILE}                      android=//android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.TextView
+&{DDL_DOCMOBILE}                      android=//android.view.View[2]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.TextView                                                                                                                                                                                          memo=//android.view.View[@resource-id='react-select-2--value']
 
-${TXT_MOBILE}                         //android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View
+${TXT_MOBILE}                         //android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/
 ${TXT_NAME_MOBILE}                    xpath=${TXT_MOBILE}/android.widget.EditText[1]
 ${TXT_LASTNAME_MOBILE}                xpath=${TXT_MOBILE}/android.widget.EditText[2]
 
@@ -67,22 +70,23 @@ ${DDL_BIRTHDAY_MOBILE_MONTH_First}    xpath=//android.widget.NumberPicker[2]/and
 ${DDL_BIRTHDAY_MOBILE_PRR_First}      xpath=//android.widget.NumberPicker[3]/android.widget.Button
 ${DDL_BIRTHDAY_MOBILE_PRR}            xpath=//android.widget.NumberPicker[3]/android.widget.Button[1]
 ${TXT_AGE_MOBILE}                     xpath=${TXT_MOBILE}/android.widget.EditText[3]
-${BTN_OCCUPTION_MOBILE}               xpath=${TXT_MOBILE}/android.widget.TextView[18]
-${BTN_OCCUPTION2_MOBILE}              xpath=${TXT_MOBILE}/android.widget.TextView[17]
+${BTN_OCCUPTION_MOBILE}               xpath=${TXT_MOBILE}/android.widget.TextView[14]
+${BTN_OCCUPTION2_MOBILE}              xpath=${TXT_MOBILE}/android.widget.TextView[15]
 &{TXT_OCCUPTION_MOBILE}               android=//android.widget.EditText[@resource-id='com.tokiomarine.fasttrack.ilp:id/occ_edittext_search']
 &{TXT_SELECTOCCUPTION_MOBILE}         android=//android.widget.TextView[@resource-id='com.tokiomarine.fasttrack.ilp:id/agm_list_item_code']
+
 ${BTN_NEXT_MOBILE}                    xpath=${TXT_MOBILE}android.view.View[6]/android.widget.Image
 
 ${MENU_PAYERINSURANCE}                xpath=//android.view.View[2]/android.view.View/android.view.View/android.widget.TabWidget/android.view.View[@resource-id='add-tab-2']
 ${MENU_INSURANCE}                     xpath=//android.view.View[2]/android.view.View/android.view.View/android.widget.TabWidget/android.view.View[@resource-id='add-tab-3']
 ${BTN_ADD_INSURANCE}                  xpath=//android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View
 
-&{TXT_SEARCHINSURANCE}                android=//android.widget.EditText[@resource-id='com.tokiomarine.fasttrack.sp5n:id/prod_edittext_search']                                                                                                                                                                                                                                                                            memo=//android.widget.EditText[@resource-id='com.tokiomarine.fasttrack.memo:id/prod_edittext_search']
-&{TXT_GROUPSAVING}                    android=//android.widget.TextView[@resource-id='com.tokiomarine.fasttrack.sp5n:id/prod_group_saving_text']                                                                                                                                                                                                                                                                          memo=//android.widget.TextView[@resource-id='com.tokiomarine.fasttrack.memo:id/prod_group_saving_text']
-&{TXT_ITEMCODE}                       android=//android.widget.TextView[@resource-id='com.tokiomarine.fasttrack.sp5n:id/product_item_code']                                                                                                                                                                                                                                                                               memo=//android.widget.TextView[@resource-id='com.tokiomarine.fasttrack.memo:id/product_item_code']
+&{TXT_SEARCHINSURANCE}                android=//android.widget.EditText[@resource-id='com.tokiomarine.fasttrack.ilp:id/prod_edittext_search']                                                                                                                                                                                                                                                                             memo=//android.widget.EditText[@resource-id='com.tokiomarine.fasttrack.memo:id/prod_edittext_search']
+&{TXT_GROUPSAVING}                    android=//android.widget.TextView[@resource-id='com.tokiomarine.fasttrack.ilp:id/prod_group_saving_text']                                                                                                                                                                                                                                                                           memo=//android.widget.TextView[@resource-id='com.tokiomarine.fasttrack.memo:id/prod_group_saving_text']
+&{TXT_ITEMCODE}                       android=//android.widget.TextView[@resource-id='com.tokiomarine.fasttrack.ilp:id/product_item_code']                                                                                                                                                                                                                                                                                memo=//android.widget.TextView[@resource-id='com.tokiomarine.fasttrack.memo:id/product_item_code']
 
 ${LOCATOR_INSURANCE}                  //android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View
-${TXT_SELECT}                         xpath=${LOCATOR_INSURANCE}/android.widget.TextView[7]
+${TXT_SELECT}                         xpath=//android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View
 ${TXT_SUMINSURED_MOBILE}              xpath=${LOCATOR_INSURANCE}/android.view.View[3]/android.widget.EditText
 ${TXT_SUMINSURED1_MOBILE}             xpath=${LOCATOR_INSURANCE}/android.view.View[4]/android.widget.EditText
 
@@ -94,24 +98,26 @@ ${MENU_SUMMARY}                       xpath=//android.view.View[2]/android.view.
 ${BTN_DOCUMENT}                       xpath=//android.view.View[@content-desc="ดู/แชร์ใบเสนอขาย"]
 
 ${BTN_OPENDOCUMENT}                   xpath=//android.webkit.WebView/android.view.View/android.widget.Button
-&{BTN_SAVEDOCUMENT}                   android=//android.widget.LinearLayout[@resource-id='com.tokiomarine.fasttrack.sp5n:id/btn_save']                                                                                                                                                                                                                                                                                    memo=//android.widget.LinearLayout[@resource-id='com.tokiomarine.fasttrack.memo:id/btn_save']
+&{BTN_SAVEDOCUMENT}                   android=//android.widget.LinearLayout[@resource-id='com.tokiomarine.fasttrack.ilp:id/btn_save']
 ${BTN_SAVE_MOBILE}                    xpath=//android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[5]
 ${BTN_BACKHOME_MOBILE}                xpath=//android.view.View[2]/android.view.View/android.view.View/android.widget.TabWidget/android.view.View[1]
 
-&{TXT_ID_MOBILE}                      android=//android.view.View[2]/android.widget.ListView/android.view.View[1]                                                                                                                                                                                                                                                                                                         memo=//android.view.View[@resource-id='react-select-2--option-0']
-&{TXT_ID1_MOBILE}                     android=//android.view.View[2]/android.widget.ListView/android.view.View[2]                                                                                                                                                                                                                                                                                                         memo=//android.view.View[@resource-id='react-select-2--option-1']
+&{TXT_ID_MOBILE}                      android=//android.view.View[2]/android.widget.ListView/android.view.View[1]
+&{TXT_ID1_MOBILE}                     android=//android.view.View[2]/android.widget.ListView/android.view.View[2]
 ${TXT_INSURED_IDNO}                   xpath=//android.widget.EditText[@resource-id='Insured_IdNo']
 ${TXT_INSURED_LASERCODE}              xpath=//android.widget.EditText[@resource-id='Insured_LaserCode']
-&{DDL_TITLE_MOBILE}                   android=//android.view.View[@resource-id='react-select-3--value']                                                                                                                                                                                                                                                                                                                   memo=//android.view.View[@resource-id='react-select-3--value']
-&{DDL_TITLE_MR_MOBILE}                android=//android.widget.ListView[@resource-id='react-select-3--list']/android.view.View[1]                                                                                                                                                                                                                                                                                         memo=//android.widget.ListView[@resource-id='react-select-3--list']/android.view.View[1]
+&{DDL_TITLE_MOBILE}                   android=//android.view.View[@resource-id='react-select-3--value']
+&{DDL_TITLE_MR_MOBILE}                android=//android.widget.ListView[@resource-id='react-select-3--list']/android.view.View[1]
 ${TXT_INSURED_THNAME_FIRST}           xpath=//android.widget.EditText[@resource-id='Insured_ThName_First']
 ${TXT_INSURED_THNAME_LAST}            xpath=//android.widget.EditText[@resource-id='Insured_ThName_Last']
+
+
 ${TXT_MAIN_SECTION1}                  //android.view.View[@resource-id='EAppFormList']
 
-&{DDL_NATION}                         android=//android.view.View[@resource-id='react-select-4--value']/android.widget.TextView                                                                                                                                                                                                                                                                                           memo=${TXT_MAIN_SECTION1}/android.view.View[5]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]
-&{DDL_NATION_THAI}                    android=//android.widget.ListView[@resource-id='react-select-4--list']/android.view.View[1]                                                                                                                                                                                                                                                                                         memo=//android.widget.ListView[@resource-id='react-select-4--list']/android.view.View[@resource-id='react-select-4--option-0']
-&{DDL_STATUS}                         android=//android.view.View[@resource-id='react-select-12--value']/android.widget.TextView                                                                                                                                                                                                                                                                                          memo=${TXT_MAIN_SECTION1}/android.view.View[7]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]
-&{DDL_STATUS_SINGLE}                  android=//android.widget.ListView[@resource-id='react-select-12--list']/android.view.View[1]                                                                                                                                                                                                                                                                                        memo=//android.view.View[2]/android.view.View[3]/android.view.View[3]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.ListView/android.view.View[1]
+&{DDL_NATION}                         android=//android.view.View[@resource-id='react-select-4--value']/android.widget.TextView
+&{DDL_NATION_THAI}                    android=//android.widget.ListView[@resource-id='react-select-4--list']/android.view.View[1]
+&{DDL_STATUS}                         android=//android.view.View[@resource-id='react-select-12--value']/android.widget.TextView
+&{DDL_STATUS_SINGLE}                  android=//android.widget.ListView[@resource-id='react-select-12--list']/android.view.View[1]
 &{TXT_INSURED_POSTCODE_MOBILE}        android=//android.view.View[3]/android.view.View/android.view.View/android.widget.EditText                                                                                                                                                                                                                                                                                          memo=//android.view.View[2]/android.view.View/android.view.View/android.view.View[2]/android.view.View[3]/android.view.View[3]/android.view.View[3]/android.view.View/android.view.View[2]/android.widget.EditText
 &{TXT_INSURED_MOBILENO_MOBILE}        android=//android.widget.EditText[@resource-id='Insured_MobileNo']                                                                                                                                                                                                                                                                                                                  memo=//android.widget.EditText[@resource-id='Insured_MobileNo']
 &{TXT_INSURED_EMAIL_MOBILE}           android=//android.widget.EditText[@resource-id='Insured_Email']                                                                                                                                                                                                                                                                                                                     memo=//android.widget.EditText[@resource-id='Insured_Email']
@@ -132,6 +138,9 @@ ${TXT_EXPIREDATE1_MOBILE}             xpath=//android.view.View[2]/android.view.
 ${BTN_EXPIREDATEOK_MOBILE}            xpath=//android.widget.Button[3]
 ${TXT_BIRTHDATE_MOBILE}               xpath=//android.widget.EditText[@resource-id='Insured_BirthDate']
 ${BTN_BIRTHDATEOK_MOBILE}             xpath=//android.widget.Button[3]
+
+${BTN_PAYER_EXPIREDATEOK_MOBILE}      xpath=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/agm_th_datepicker_ok_btn']
+${BTN_PAYER_BIRTHDATEOK_MOBILE}       xpath=//android.widget.Button[@resource-id='com.tokiomarine.fasttrack.ilp:id/agm_th_datepicker_ok_btn']
 
 ${RDO_ISSTUDENT_MOOBILE}              xpath=//android.view.View[8]/android.view.View/android.view.View/android.widget.TextView[1]
 ${RDO_NOTISSTUDENT_MOOBILE}           xpath=//android.view.View[8]/android.view.View/android.view.View/android.widget.TextView[2]

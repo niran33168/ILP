@@ -10,7 +10,7 @@
                     "IPAppium": "localhost:4723",
                     "appPackage": "com.tokiomarine.fasttrack.ilp",
                     "appActivity": "com.tokiomarine.fasttrack.MainActivity",
-                    "noReset": "true",
+                    "noReset": "false",
                     "unicodeKeyboard": "true",
                     "newCommandTimeout": "3000",
                     "deviceStatus": "Online"
@@ -25,7 +25,7 @@
                     "deviceName": "R52N70B1R9B",
                     "automationName": "UiAutomator2",
                     "IPAppium": "localhost:4723",
-                    "appPackage": "com.tokiomarine.fasttrack.gb",
+                    "appPackage": "com.tokiomarine.fasttrack.sp5n",
                     "appActivity": "com.tokiomarine.fasttrack.MainActivity",
                     "noReset": "true",
                     "unicodeKeyboard": "true",
@@ -44,24 +44,7 @@
                     "IPAppium": "localhost:4723",
                     "appPackage": "com.tokiomarine.fasttrack.gb",
                     "appActivity": "com.tokiomarine.fasttrack.MainActivity",
-                    "noReset": "true",
-                    "unicodeKeyboard": "true",
-                    "newCommandTimeout": "3000",
-                    "deviceStatus": "Online"
-                }
-            ]
-        },
-        {
-            "EmulatorILP": [
-                {
-                    "platformName": "Android",
-                    "platformVersion": "10",
-                    "deviceName": "emulator-5554",
-                    "automationName": "UiAutomator2",
-                    "IPAppium": "localhost:4723",
-                    "appPackage": "com.tokiomarine.fasttrack.ilp",
-                    "appActivity": "com.tokiomarine.fasttrack.MainActivity",
-                    "noReset": "true",
+                    "noReset": "false",
                     "unicodeKeyboard": "true",
                     "newCommandTimeout": "3000",
                     "deviceStatus": "Online"

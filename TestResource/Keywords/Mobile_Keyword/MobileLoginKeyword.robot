@@ -12,7 +12,7 @@ CheckPermission
     WaitAndClick                                   ${PHOTO_PERMISSION['${ENV}']}         ${timeout}
 
 VerifyLandingpage
-    AppiumLibrary.Wait Until Element Is Visible    ${MOBILE_TXT_DISCLAIMER['${ENV}']}    60s
+    AppiumLibrary.Wait Until Element Is Visible    ${MOBILE_TXT_DISCLAIMER['${ENV}']}    ${timeout}
     VerifyText                                     ${MOBILE_TXT_DISCLAIMER['${ENV}']}    Disclaimer
     WaitAndClick                                   ${BTN_OK_MOBILE['${ENV}']}
 
@@ -42,7 +42,7 @@ ConfirmLogin
 
 InputPasscode
     FOR                                            ${index}                              IN RANGE                                       6
-    WaitAndClick                                   ${BTN_NUMBER_1['${ENV}']}
+    WaitAndClick                                   ${BTN_NUMBER_1['${ENV}']}             ${timeout}
     END
 
 ClickButtonOK
@@ -58,9 +58,14 @@ VerifyAndLogin
     LoginSystemMobile                              ${data_test}
     ConfirmLogin
 
+VerifyTextMenu
+    VerifyText                                     ${MOBILE_TXT_MENU['${ENV}']}          ประกันชีวิตควบการลงทุน
+    Run Keyword If                                 '${ENV}' == 'memo'                    Execute Adb Shell                              input tap 100 200
+
 SelectMenuMobile
     [Arguments]                                    ${data_test}
-    Execute Adb Shell                              input tap 200 200
+    Execute Adb Shell                              input tap 100 200
+    VerifyTextMenu
     ${menu}                                        Convert To Lower Case                 ${data_test['Menu']}
     Run Keyword If                                 '${menu}' == 'quotation'              MenuQuotation
     ...                                            ELSE                                  MenuApplication

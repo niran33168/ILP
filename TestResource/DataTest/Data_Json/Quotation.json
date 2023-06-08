@@ -19,8 +19,25 @@
         "Age": "",
         "Occupation": ""
     },
-    "Contract": "",
-    "Basiclist": "",
-    "SelectBasiclist": "",
-    "Suminsured": ""
+    "Insured": {
+        "Contract": "",
+        "Basiclist": "",
+        "SelectBasiclist": "",
+        "Suminsured": ""
+    },
+    "Quiz": {
+        "QuizFromNo": "",
+        "QuizFromNo1": "",
+        "QuizFromNo2": "",
+        "QuizFromNo3": "",
+        "QuizFromNo4": "",
+        "QuizFromNo5": "",
+        "QuizFromNo6": "",
+        "QuizFromNo7": "",
+        "QuizFromNo8": "",
+        "QuizFromNo9": "",
+        "QuizFromNo10": "",
+        "QuizFromNo11": "",
+        "QuizFromNo12": ""
+    }
 }

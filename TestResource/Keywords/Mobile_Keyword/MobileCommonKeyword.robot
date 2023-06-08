@@ -6,25 +6,25 @@ WaitAndClick
     [Arguments]                       ${locator}                                                                                             ${timeout}=none
     ${status}                         Run Keyword And Return Status                                                                          AppiumLibrary.Wait Until Element Is Visible    ${locator}                                       ${timeout}
     Run Keyword If                    '${status}' == 'True'                                                                                  AppiumLibrary.Click Element                    ${locator}
-    ...                               ELSE                                                                                                   Run Keywords                                   Log                                              False                                  AND                                    AppiumLibrary.Capture Page Screenshot
+    ...                               ELSE                                                                                                   Run Keywords                                   Log                                              False                                  AND                         AppiumLibrary.Capture Page Screenshot
 
 WaitAndInput
     [Arguments]                       ${locator}                                                                                             ${text}                                        ${timeout}=none
     ${status}                         Run Keyword And Return Status                                                                          AppiumLibrary.Wait Until Element Is Visible    ${locator}                                       ${timeout}
     Run Keyword If                    '${status}' == 'True'                                                                                  AppiumLibrary.Input Text                       ${locator}                                       ${text}
-    ...                               ELSE                                                                                                   Run Keywords                                   Log                                              False                                  AND                                    AppiumLibrary.Capture Page Screenshot
+    ...                               ELSE                                                                                                   Run Keywords                                   Log                                              False                                  AND                         AppiumLibrary.Capture Page Screenshot
 
 WaitAndTap
     [Arguments]                       ${locator}                                                                                             ${timeout}=none
     ${status}                         Run Keyword And Return Status                                                                          AppiumLibrary.Wait Until Element Is Visible    ${locator}                                       ${timeout}
     Run Keyword If                    '${status}' == 'True'                                                                                  AppiumLibrary.Tap                              ${locator}
-    ...                               ELSE                                                                                                   Run Keywords                                   Log                                              False                                  AND                                    AppiumLibrary.Capture Page Screenshot
+    ...                               ELSE                                                                                                   Run Keywords                                   Log                                              False                                  AND                         AppiumLibrary.Capture Page Screenshot
 
 VerifyText
     [Arguments]                       ${locator}                                                                                             ${text}
     ${status}                         Run Keyword And Return Status                                                                          AppiumLibrary.Wait Until Element Is Visible    ${locator}                                       ${timeout}
     Run Keyword If                    '${status}' == 'True'                                                                                  AppiumLibrary.Element Text Should Be           ${locator}                                       ${text}
-    ...                               ELSE                                                                                                   Run Keywords                                   Log                                              False                                  AND                                    AppiumLibrary.Capture Page Screenshot
+    ...                               ELSE                                                                                                   Run Keywords                                   Log                                              False                                  AND                         AppiumLibrary.Capture Page Screenshot
 
 ScrollElement
     [Arguments]                       ${locator}
@@ -37,12 +37,12 @@ ScrollElement
     ${end_y}                          Evaluate                                                                                               ${height} * 0.5
     AppiumLibrary.Swipe               ${start_x}                                                                                             ${start_y}                                     ${end_x}                                         ${end_y}                               500
     ${status}                         Run Keyword And Return Status                                                                          AppiumLibrary.Wait Until Element Is Visible    ${locator}                                       ${timeout}
-    Run Keyword If                    '${status}' == 'True'                                                                                  Run Keywords                                   AppiumLibrary.Click Element                      ${locator}                             AND                                    Exit For Loop
-    ...                               ELSE                                                                                                   Wait Until Keyword Succeeds                    5x                                               15s                                    WaitAndClick                           xpath=//android.widget.TextView
+    Run Keyword If                    '${status}' == 'True'                                                                                  Run Keywords                                   AppiumLibrary.Click Element                      ${locator}                             AND                         Exit For Loop
+    ...                               ELSE                                                                                                   Wait Until Keyword Succeeds                    5x                                               15s                                    WaitAndClick                xpath=//android.widget.TextView
     END
 
 mGetDevices
-    [Arguments]                       ${devicesName}                                                                                         ${configPath}                                  ${appPackage}                                    ${appActivity}                         ${Reset}
+    [Arguments]                       ${devicesName}                                                                                         ${configPath}
     [Documentation]                   This Keyword for Get Data From Devices
     ...
     ...                               *Format keyword*
@@ -52,8 +52,9 @@ mGetDevices
     ...                               mGetDevices | ${DeviceName_Galaxy A8} | ${JsonfilePath} | ${AppNameAisDigi} | ${AppActivityAisDigi}
     ${Devices}                        Get Devices                                                                                            ${devicesName}                                 ${configPath}
     AppiumLibrary.Open Application    http://${Devices['IPAppium']}/wd/hub                                                                   platformName=${Devices['platformName']}        platformVersion=${Devices['platformVersion']}    deviceName=${Devices['deviceName']}    appPackage=${Devices['appPackage']}    appActivity=${Devices['appActivity']}
-    ...                               noReset=${Reset}                                                                                       unicodeKeyboard=true                           automationName=UiAutomator2
-    [Return]                          ${Reset}
+    ...                               noReset=${Devices['noReset']}                                                                                      unicodeKeyboard=true                           automationName=UiAutomator2
+    [Return]                          ${Devices['noReset']}
+
 
 Get Devices
     [Arguments]                       ${SelectDevices}                                                                                       ${ConfigPath}
@@ -89,7 +90,3 @@ mPrint Detail Selected Device
     ${Set_New_Var}                    Set Variable                                                                                           ${set_New_Var['${DeviceName}']}
     ${Set_New_Var}                    Set Variable                                                                                           ${Set_New_Var[0]}
     [Return]                          ${Set_New_Var}
-
-TapPoint
-    [Arguments]                                    ${x}    ${y}
-    Execute Adb Shell                              input tap ${x} ${y}

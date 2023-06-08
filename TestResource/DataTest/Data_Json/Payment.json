@@ -1,0 +1,27 @@
+{
+    "Login": {
+        "Username": "",
+        "Password": ""
+    },
+    "Payment": {
+        "PaymentMethod": ""
+    },
+    "Credit": {
+        "BankName": "",
+        "CreditNo": "",
+        "ExpiryDateMonth": "",
+        "ExpiryDateYear": "",
+        "CardHolderName": "",
+        "CardHolderSurName": "",
+        "Relationship": "",
+        "FormatPay": ""
+    },
+    "MobileBank": {
+        "BankName": "",
+        "Name": "",
+        "Surname": "",
+        "BankIdNo": "",
+        "BankPhone": "",
+        "BankRelationship": ""
+    }
+}

@@ -12,6 +12,12 @@ Resource          ../Variables/LocalConfig.robot
 Resource          ../Variables/MobileConfig.robot
 Resource          Common_Keyword/ExcelKeyword.robot
 Resource          Common_Keyword/CommonKeyword.robot
+Resource          Web_Keyword/WebKeyword.robot
+Resource          Web_Keyword/LoginKeyword.robot
+Resource          Web_Keyword/HomeKeyword.robot
+Resource          Web_Keyword/QuotationKeyword.robot
+Resource          Web_Keyword/ApplicationKeyword.robot
+Resource          Web_Keyword/PrepareDataKeyword.robot
 Resource          Mobile_Keyword/MobilerepareDataKeyword.robot
 Resource          Mobile_Keyword/MobileCommonKeyword.robot
 Resource          Mobile_Keyword/MobileLoginKeyword.robot
