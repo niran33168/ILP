@@ -11,4 +11,4 @@ Mobile Quotation Case Success
     [Template]    MobileQuotation
      #rowNo        testcaseNo    Desc
     2             TS_001_001           ผู้เอาประกันอายุเท่ากับ 16 ปี ชำระรายเดือน
-    # 3             TS_001_002           ผู้เอาประกันอายุน้อยกว่า 16 ปี ชำระรายเดือน
+    3             TS_001_002           ผู้เอาประกันอายุน้อยกว่า 16 ปี ชำระรายเดือน

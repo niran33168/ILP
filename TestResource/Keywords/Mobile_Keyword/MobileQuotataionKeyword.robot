@@ -5,7 +5,7 @@ Resource    ../AllKeywords.txt
 MobileQuotation
     [Arguments]                                           ${rowNo}                                                                                                                                                                                                               ${testcaseNo}                                       ${Desc}
     MobilerepareDataKeyword.Generate_File_Path_Request    ${JSON_QUOTATION}
-    ${data_test}                                          Read_Excel_For_Test                                                                                                                                                                                                    ${EXCEL_NAME}                                       ${SHEET_NAME}                                                                                                                                                                                                          ${rowNo}
+    ${data_test}                                          Read_Excel_For_Test                                                                                                                                                                                                    ${EXCEL_NAME}                                       ${SHEET_NAME}                                                                                                                                                                                                      ${rowNo}
     ${data_test}                                          PrepareDataQuotation                                                                                                                                                                                                   ${data_test}                                        ${rowNo}
     LoginAndSetupPin                                      ${data_test}
     SelectMenuMobile                                      ${data_test}
@@ -13,10 +13,10 @@ MobileQuotation
     InputInformation                                      ${data_test}
 
 CreateQuotationMobile
-    AppiumLibrary.Wait Until Element Is Visible           ${BTN_CREATE_QUOTATION_MOBILE}    ${timeout}
-    WaitAndClick                                          ${BTN_CREATE_QUOTATION_MOBILE}
-    ${status}                                             Run Keyword And Return Status                                                                                                                                                                                          AppiumLibrary.Wait Until Element Is Visible         ${BTN_CREATE_QUOTATION_MOBILE}                                                                                                                                                                                         ${timeout}
-    Run Keyword If                                        '${status}' == 'True'                                                                                                                                                                                                  WaitAndClick                                        ${BTN_CREATE_QUOTATION_MOBILE}
+    AppiumLibrary.Wait Until Element Is Visible           ${BTN_CREATE_QUOTATION_MOBILE}                                                                                                                                                                                         ${timeout}
+    WaitAndTap                                            ${BTN_CREATE_QUOTATION_MOBILE}
+    ${status}                                             Run Keyword And Return Status                                                                                                                                                                                          AppiumLibrary.Wait Until Element Is Visible         ${BTN_CREATE_QUOTATION_MOBILE}                                                                                                                                                                                     ${timeout}
+    Run Keyword If                                        '${status}' == 'True'                                                                                                                                                                                                  Execute Adb Shell                                   input tap 2400 250
     CloseFrom
 
 InputInformation
@@ -42,6 +42,8 @@ FlowAgeMore16
     [Arguments]                                           ${data_test}
     QuotationTab3
     QuotationTab4                                         ${data_test}
+    QuotationTab5
+    QuotationTab6
 
 QuotationTab3
     WaitAndTap                                            xpath=//android.view.View[@resource-id='add-tab-3']
@@ -56,38 +58,90 @@ QuotationTab4
     AppiumLibrary.Wait Until Element Is Visible           xpath=//android.view.View[@resource-id='add-tab-4']                                                                                                                                                                    ${timeout}
     WaitAndTap                                            xpath=//android.view.View[@resource-id='add-tab-4']
     AppiumLibrary.Wait Until Element Is Visible           xpath=//android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View    ${timeout}
-    Run Keyword If                                        '${data_test['Quiz']['QuizFromNo']}' == 'Y'    RiskForm     ${data_test}                                                                                                                                                                              
-    ...                                                   ELSE                                                                                                                                                                                                                   WaitAndTap                                          xpath=//android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View
+    Run Keyword If                                        '${data_test['Quiz']['QuizFromNo']}' == 'Y'                                                                                                                                                                            RiskForm                                            ${data_test}
+    ...                                                   ELSE                                                                                                                                                                                                                   NotAnswser
+
+NotAnswser
+    WaitAndTap                                            xpath=//android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View
     WaitAndTap                                            xpath=//android.widget.Button[@text='หน้าถัดไป']
+    Capture Page Screenshot
 
 RiskForm
     [Arguments]                                           ${data_test}
-    WaitAndTap                                          xpath=//android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View
-    AppiumLibrary.Wait Until Element Is Visible           xpath=//android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.TextView[1]    
-    FOR   ${i}    IN RANGE    4
-        IF    ${i} == 1
-            Run Keyword If                                        '${data_test['Quiz']['QuizFromNo1']}' == 1    Log To Console    1
-            ...    ELSE If    '${data_test['Quiz']['QuizFromNo1']}' == 2    Log To Console    2
-            ...    ELSE If    '${data_test['Quiz']['QuizFromNo1']}' == 3    Log To Console    3
-            ...    ELSE If    '${data_test['Quiz']['QuizFromNo1']}' == 4    Log To Console    4
-        ELSE IF    ${i} == 2
-            Run Keyword If                                        '${data_test['Quiz']['QuizFromNo2']}' == 1    Log To Console    2.1
-            ...    ELSE If    '${data_test['Quiz']['QuizFromNo2']}' == 2    Log To Console    2.2
-            ...    ELSE If    '${data_test['Quiz']['QuizFromNo2']}' == 3    Log To Console    2.3
-            ...    ELSE If    '${data_test['Quiz']['QuizFromNo2']}' == 4    Log To Console    2.4
-        ELSE
-            Log To Console    High ${i}
-        END
-    END
+    WaitAndTap                                            xpath=//android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View
+    WaitAndTap                                            xpath=//android.widget.Button[@text='หน้าถัดไป']
 
+    Execute Adb Shell                                     input tap 1900 600
+    Execute Adb Shell                                     input tap 1000 1200
+    Capture Page Screenshot
+    Execute Adb Shell                                     input swipe 2400 1000 2400 300
+    Execute Adb Shell                                     input tap 1000 700
+    Execute Adb Shell                                     input tap 1000 1200
+    Capture Page Screenshot
+    Execute Adb Shell                                     input swipe 2400 1000 2400 300
+    Execute Adb Shell                                     input tap 1400 800
+    Execute Adb Shell                                     input tap 1000 1200
+    Capture Page Screenshot
+    Execute Adb Shell                                     input swipe 2400 1000 2400 300
+    Execute Adb Shell                                     input swipe 2400 1000 2400 300
+    Execute Adb Shell                                     input tap 1000 400
+    Execute Adb Shell                                     input tap 1000 1100
+    Execute Adb Shell                                     input swipe 2400 1000 2400 300
+    Execute Adb Shell                                     input tap 1400 700
+    Execute Adb Shell                                     input tap 1000 1100
+    Execute Adb Shell                                     input swipe 2400 1000 2400 300
+    Execute Adb Shell                                     input tap 1400 800
+    Execute Adb Shell                                     input tap 1400 1200
+    Execute Adb Shell                                     input tap 1800 1400
+    Capture Page Screenshot
+
+    sleep                                                 2s
+    Execute Adb Shell                                     input swipe 2400 1000 2400 300
+    Execute Adb Shell                                     input tap 1000 1050
+    Capture Page Screenshot
+
+QuotationTab5
+    WaitAndTap                                            xpath=//android.view.View[@resource-id='add-tab-5']
+    Capture Page Screenshot
+    Execute Adb Shell                                     input tap 1000 900
+
+    Execute Adb Shell                                     input tap 1000 500
+    Execute Adb Shell                                     input tap 1000 850
+    Capture Page Screenshot
+
+    Execute Adb Shell                                     input tap 1000 500
+    Execute Adb Shell                                     input tap 1100 750
+
+    Execute Adb Shell                                     input tap 500 500
+    Execute Adb Shell                                     input tap 2200 300
+    Capture Page Screenshot
+    Execute Adb Shell                                     input swipe 2400 1000 2400 400
+    Execute Adb Shell                                     input tap 250 500
+    Execute Adb Shell                                     input keyevent KEYCODE_BACK
+    Execute Adb Shell                                     input tap 1500 1500
+    Capture Page Screenshot
+
+    Execute Adb Shell                                     input tap 2200 900
+    Execute Adb Shell                                     input text 10
+    Execute Adb Shell                                     input tap 1500 1500
+    Capture Page Screenshot
+
+QuotationTab6
+    WaitAndTap                                            xpath=//android.view.View[@resource-id='add-tab-6']
+    sleep                                                 2s
+    Capture Page Screenshot
+    Execute Adb Shell                                     input swipe 2400 1000 2400 400
+    WaitAndClick                                          xpath=//android.view.View[@content-desc="ดูใบเสนอขาย"]
+    Capture Page Screenshot
 
 FlowAgeless16
     [Arguments]                                           ${data_test}
     WaitAndTap                                            xpath=//android.view.View[@resource-id='add-tab-2']
-
     MobilePayerInformation                                ${data_test}
-    MobileInsuredInformation                              ${data_test}
-    MobileSummaryInsured
+    QuotationTab3
+    QuotationTab4                                         ${data_test}
+    QuotationTab5
+    QuotationTab6
 
 SelectDateMobile
     [Arguments]                                           ${data_test}
@@ -126,9 +180,10 @@ SeleteOccuption
 
 SeleteOccuption2
     [Arguments]                                           ${data_test}
-    AppiumLibrary.Click Element                           ${BTN_OCCUPTION2_MOBILE}
+    Execute Adb Shell                                     input tap 2000 1500
+    # AppiumLibrary.Click Element                           ${BTN_OCCUPTION2_MOBILE}
     WaitAndInput                                          ${TXT_OCCUPTION_MOBILE['${ENV}']}                                                                                                                                                                                      ${data_test['PayerInformation']['Occupation']}
-    AppiumLibrary.Click Element                           ${TXT_SELECTOCCUPTION_MOBILE['${ENV}']}
+    WaitAndTap                                            ${TXT_SELECTOCCUPTION_MOBILE['${ENV}']}
 
 MobilePayerInformation
     [Arguments]                                           ${data_test}
@@ -163,7 +218,7 @@ MobileInsuredInformation
 
 MobileSummaryInsured
     WaitAndTap                                            ${MENU_SUMMARY}
-    AppiumLibrary.Swipe By Percent                        50                                                                                                                                                                                                                     90                                                  50                                                                                                                                                                                                                     0
+    AppiumLibrary.Swipe By Percent                        50                                                                                                                                                                                                                     90                                                  50                                                                                                                                                                                                                 0
     WaitAndTap                                            ${BTN_DOCUMENT}
     AppiumLibrary.Tap                                     ${None}                                                                                                                                                                                                                1300                                                1200
     AppiumLibrary.Tap                                     ${None}                                                                                                                                                                                                                90                                                  300
@@ -187,7 +242,7 @@ InformationFather
     WaitAndClick                                          ${DDL_TITLE_FATHER_MR_MOBILE}
     WaitAndInput                                          ${TXT_INSURED_FATHERNAME_FIRST}                                                                                                                                                                                        ${data_test['FatherName']}
     WaitAndInput                                          ${TXT_INSURED_FATHERNAME_LAST}                                                                                                                                                                                         ${data_test['FatherLastname']}
-    ${status}                                             Run Keyword And Return Status                                                                                                                                                                                          AppiumLibrary.Wait Until Element Is Visible         ${RDO_FATHER_ALIVE_MOBILE}                                                                                                                                                                                             ${timeout}
+    ${status}                                             Run Keyword And Return Status                                                                                                                                                                                          AppiumLibrary.Wait Until Element Is Visible         ${RDO_FATHER_ALIVE_MOBILE}                                                                                                                                                                                         ${timeout}
     Run Keyword If                                        '${status}' == 'True'                                                                                                                                                                                                  AppiumLibrary.Click Element                         ${RDO_FATHER_ALIVE_MOBILE}
     Run Keyword If                                        '${data_test['InsuredInformation']['FatherAlive']}' == 'Y'                                                                                                                                                             WaitAndClick                                        xpath=/android.view.View[2]/android.view.View/android.view.View/android.view.View[2]/android.view.View[3]/android.view.View[3]/android.view.View[4]/android.view.View/android.view.View[2]/android.view.View[1]
     ...                                                   ELSE                                                                                                                                                                                                                   WaitAndClick                                        xpath=/android.view.View[2]/android.view.View/android.view.View/android.view.View[2]/android.view.View[3]/android.view.View[3]/android.view.View[4]/android.view.View/android.view.View[2]/android.view.View[2]
@@ -198,7 +253,7 @@ InformationMother
     WaitAndClick                                          ${DDL_TITLE_MISS_MOBILE}
     WaitAndInput                                          ${TXT_INSURED_MOTHERNAME_FIRST}                                                                                                                                                                                        ${data_test['MotherName']}
     WaitAndInput                                          ${TXT_INSURED_MOTHERNAME_LAST}                                                                                                                                                                                         ${data_test['MotherLastname']}
-    ${status}                                             Run Keyword And Return Status                                                                                                                                                                                          AppiumLibrary.Wait Until Element Is Visible         ${RDO_MOTHER_ALIVE_MOBILE}                                                                                                                                                                                             ${timeout}
+    ${status}                                             Run Keyword And Return Status                                                                                                                                                                                          AppiumLibrary.Wait Until Element Is Visible         ${RDO_MOTHER_ALIVE_MOBILE}                                                                                                                                                                                         ${timeout}
     Run Keyword If                                        '${status}' == 'True'                                                                                                                                                                                                  AppiumLibrary.Click Element                         ${RDO_MOTHER_ALIVE_MOBILE}
     Run Keyword If                                        '${data_test['InsuredInformation']['MotherAlive']}' == 'Y'                                                                                                                                                             WaitAndClick                                        ${RDO_MOTHER_ALIVE_MOBILE}
     ...                                                   ELSE                                                                                                                                                                                                                   WaitAndClick                                        ${RDO_MOTHER_NOT_ALIVE_MOBILE}
@@ -207,5 +262,5 @@ InformationAddress
     [Arguments]                                           ${data_test}
     WaitAndInput                                          ${TXT_POSTCODE_MOBILE}                                                                                                                                                                                                 ${data_test['Postcode']}
     WaitAndTap                                            ${TXT_SELECTPOSTCODE_MOBILE}
-    AppiumLibrary.Swipe By Percent                        90                                                                                                                                                                                                                     90                                                  90                                                                                                                                                                                                                     0
+    AppiumLibrary.Swipe By Percent                        90                                                                                                                                                                                                                     90                                                  90                                                                                                                                                                                                                 0
     WaitAndClick                                          ${BTN_COPYADDRESS}
