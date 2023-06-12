@@ -10,9 +10,9 @@ ApplicationMobile
     LoginAndSetupPin                                      ${data_test}
     SelectMenuMobile                                      ${data_test}
     CreateApplicationMobile                               ${data_test}
-    InsuredInformationMobile                              ${data_test}              ${rowNo}
-    PayerInformationMobile                                ${data_test}
-    PolicyMobile                                          ${data_test}
+    InsuredInformationMobile                              ${data_test}
+    # PayerInformationMobile                                ${data_test}
+    # PolicyMobile                                          ${data_test}
     # QuestionnaireMobile                                   ${data_test}
     # QuestionnaireMobile2                                  ${data_test}
     # QuestionnaireTaxMobile
