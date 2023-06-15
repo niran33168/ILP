@@ -308,6 +308,7 @@ QuestionnaireMobile
     Execute Adb Shell                              input swipe 2400 600 2400 0
     AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[5]/android.view.View/android.view.View/android.widget.TextView[2]                                                                                                       ${timeout}
     WaitAndClick                                   xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[5]/android.view.View/android.view.View/android.widget.TextView[2]                                                                                                       ${timeout}
+    Execute Adb Shell                              input tap 1200 850
     Execute Adb Shell                              input tap 1200 900
     Execute Adb Shell                              input tap 1400 950
     # AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[6]/android.view.View/android.view.View/android.widget.TextView[2]    ${timeout}
@@ -315,13 +316,16 @@ QuestionnaireMobile
     # AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[7]/android.view.View/android.widget.EditText[1]    ${timeout}
     # WaitAndClick    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[7]/android.view.View/android.widget.EditText[1]    ${timeout}
     Execute Adb Shell                              input tap 1000 1100
+    Execute Adb Shell                              input tap 1000 400
+    sleep                                          5s
     Execute Adb Shell                              input text 60
-    sleep                                          3s
+
+    Execute Adb Shell                              input tap 1800 400
+    sleep                                          5s
+    Execute Adb Shell                              input text 179
+    
     # AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[7]/android.view.View/android.widget.EditText[2]    ${timeout}
     # WaitAndClick    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[7]/android.view.View/android.widget.EditText[2]    ${timeout}
-    Execute Adb Shell                              input tap 1800 400
-    sleep                                          3s
-    Execute Adb Shell                              input text 179
     Execute Adb Shell                              input tap 1300 940
     Execute Adb Shell                              input tap 1300 950
     Execute Adb Shell                              input tap 1300 630
@@ -380,9 +384,9 @@ QuestionnaireTaxMobile
 
 UnitHolder
     Execute Adb Shell                              input swipe 500 500 500 0
-    WaitAndClick                                   ${TXT_SECTION7['${ENV}']}
-    Execute Adb Shell                              input tap 200 1000
-    Execute Adb Shell                              input tap 200 1000
+    WaitAndClick    xpath=//android.widget.TextView[@text='ข้อมูลผู้ถือหน่วยลงทุน']
+    # WaitAndClick                                   ${TXT_SECTION7['${ENV}']}
+    WaitAndClick    xpath=//android.widget.TextView[@text='สถานที่ทำงาน']
     Execute Adb Shell                              input swipe 2400 400 2400 1600
     WaitAndInput                                   xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.EditText[1]                                                                                                                         AAAAAAAAAA
     WaitAndInput                                   xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.EditText[2]                                                                                                                         QA
@@ -405,6 +409,7 @@ UnitHolder
     Execute Adb Shell                              input tap 1000 750
     sleep                                          2s
     Execute Adb Shell                              input tap 1000 1350
+    sleep                                          5s
     Execute Adb Shell                              input text 500000
 
     Execute Adb Shell                              input tap 1000 750
@@ -414,9 +419,25 @@ UnitHolder
     Execute Adb Shell                              input text AAAA%sBBBB
 
     Execute Adb Shell                              input tap 1000 850
+    Execute Adb Shell                              input text 25
+
+    Execute Adb Shell                              input tap 950 1500
+    Execute Adb Shell                              input tap 950 1550
     sleep                                          5s
+
+    Execute Adb Shell                              input tap 1800 1230
+    Execute Adb Shell                              input text 0894444835
+    sleep                                          5s
+
+    WaitAndClick    xpath=//android.widget.TextView[@text='ข้อมูลผู้ถือหน่วยลงทุน']
+    # WaitAndClick                                   ${TXT_SECTION7['${ENV}']}
+
+SuitabilityTest
+    WaitAndClick    xpath=//android.widget.TextView[@text='แบบประเมินความเสี่ยง']
+    WaitAndClick    xpath=//android.view.View[2]/android.view.View[1]/android.view.View[2]/android.view.View[9]/android.view.View[2]/android.widget.TextView[@text='แบบประเมินความเสี่ยง']
+    sleep    5s
     Capture Page Screenshot
-    WaitAndClick                                   ${TXT_SECTION7['${ENV}']}
+    WaitAndClick    xpath=//android.widget.TextView[@text='แบบประเมินความเสี่ยง']
 
 SelectDropDownUnit
     Execute Adb Shell                              input tap 1000 600

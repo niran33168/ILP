@@ -17,7 +17,7 @@ ApplicationMobile
     QuestionnaireMobile2                                  ${data_test}
     QuestionnaireTaxMobile
     UnitHolder
-    # SuitabilityTest
+    SuitabilityTest
     # Fund
 
 # ApplicationMobileSimulator
