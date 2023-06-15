@@ -305,18 +305,19 @@ QuestionnaireMobile
     WaitAndClick                                   xpath=//android.view.View/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[3]/android.view.View/android.view.View/android.widget.TextView[2]                                                                                     ${timeout}
     WaitAndClick                                   xpath=//android.view.View/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[4]/android.view.View/android.view.View/android.widget.TextView[2]                                                                                     ${timeout}
     WaitAndClick                                   xpath=//android.view.View/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[5]/android.view.View/android.view.View/android.widget.TextView[2]                                                                                     ${timeout}
-    Execute Adb Shell                              input swipe 2400 600 2400 0
-    AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[5]/android.view.View/android.view.View/android.widget.TextView[2]                                                                                                       ${timeout}
-    WaitAndClick                                   xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[5]/android.view.View/android.view.View/android.widget.TextView[2]                                                                                                       ${timeout}
-    Execute Adb Shell                              input tap 1200 850
-    Execute Adb Shell                              input tap 1200 900
-    Execute Adb Shell                              input tap 1400 950
-    # AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[6]/android.view.View/android.view.View/android.widget.TextView[2]    ${timeout}
-    # WaitAndClick    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[6]/android.view.View/android.view.View/android.widget.TextView[2]    ${timeout}
-    # AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[7]/android.view.View/android.widget.EditText[1]    ${timeout}
+    Execute Adb Shell                              input swipe 2400 800 2400 0
+    # AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[5]/android.view.View/android.view.View/android.widget.TextView[2]                                                                                                       ${timeout}
+    # WaitAndClick                                   xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[5]/android.view.View/android.view.View/android.widget.TextView[2]                                                                                                       ${timeout}
+    # AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[6]/android.view.View/android.view.View/android.widget.TextView[2]                                                                                                       ${timeout}
+    # WaitAndClick                                   xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[6]/android.view.View/android.view.View/android.widget.TextView[2]                                                                                                       ${timeout}
+    # # AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[7]/android.view.View/android.widget.EditText[1]    ${timeout}
     # WaitAndClick    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[7]/android.view.View/android.widget.EditText[1]    ${timeout}
-    Execute Adb Shell                              input tap 1000 1100
-    Execute Adb Shell                              input tap 1000 400
+    Execute Adb Shell                              input tap 1300 1100
+    Execute Adb Shell                              input tap 1300 1150
+
+
+    Execute Adb Shell                              input tap 1300 1300
+    Execute Adb Shell                              input tap 1300 400
     sleep                                          5s
     Execute Adb Shell                              input text 60
 
@@ -434,12 +435,26 @@ UnitHolder
 SuitabilityTest
     WaitAndClick                                   xpath=//android.widget.TextView[@text='แบบประเมินความเสี่ยง']
     Execute Adb Shell                              input tap 200 1150
-    sleep    5s
+    sleep                                          5s
     Execute Adb Shell                              input tap 2000 750
     Execute Adb Shell                              input tap 1000 1250
     Execute Adb Shell                              input swipe 2400 800 2400 0
     Execute Adb Shell                              input tap 1000 650
     Execute Adb Shell                              input tap 1000 1100
+    Execute Adb Shell                              input swipe 2400 600 2400 0
+    Execute Adb Shell                              input tap 1400 800
+    Execute Adb Shell                              input tap 1400 1200
+    Execute Adb Shell                              input swipe 2400 600 2400 0
+    Execute Adb Shell                              input swipe 2400 600 2400 0
+    Execute Adb Shell                              input tap 1400 800
+    Execute Adb Shell                              input tap 1400 1500
+    Execute Adb Shell                              input swipe 2400 600 2400 0
+    Execute Adb Shell                              input tap 1400 1200
+    Execute Adb Shell                              input tap 1400 1550
+    Execute Adb Shell                              input swipe 2400 600 2400 0
+    Execute Adb Shell                              input tap 1400 1300
+    Execute Adb Shell                              input tap 1400 1550
+
     Capture Page Screenshot
     WaitAndClick                                   xpath=//android.widget.TextView[@text='แบบประเมินความเสี่ยง']
 
