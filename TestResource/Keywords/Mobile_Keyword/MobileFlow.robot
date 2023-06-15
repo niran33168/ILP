@@ -11,14 +11,14 @@ ApplicationMobile
     SelectMenuMobile                                      ${data_test}
     CreateApplicationMobile                               ${data_test}
     InsuredInformationMobile                              ${data_test}
-    # PayerInformationMobile                                ${data_test}
-    # PolicyMobile                                          ${data_test}
-    # QuestionnaireMobile                                   ${data_test}
-    # QuestionnaireMobile2                                  ${data_test}
-    # QuestionnaireTaxMobile
-    # Fatca
-    # RetryDopa
-    # RetryDopa2
+    PayerInformationMobile                                ${data_test}
+    PolicyMobile                                          ${data_test}
+    QuestionnaireMobile                                   ${data_test}
+    QuestionnaireMobile2                                  ${data_test}
+    QuestionnaireTaxMobile
+    UnitHolder
+    # SuitabilityTest
+    # Fund
 
 # ApplicationMobileSimulator
 #           [Arguments]                                           ${rowNo}                  ${testcaseNo}      ${Desc}
