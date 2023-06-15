@@ -323,7 +323,7 @@ QuestionnaireMobile
     Execute Adb Shell                              input tap 1800 400
     sleep                                          5s
     Execute Adb Shell                              input text 179
-    
+
     # AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[7]/android.view.View/android.widget.EditText[2]    ${timeout}
     # WaitAndClick    xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[7]/android.view.View/android.widget.EditText[2]    ${timeout}
     Execute Adb Shell                              input tap 1300 940
@@ -343,35 +343,35 @@ QuestionnaireMobile2
     Execute Adb Shell                              input tap 1600 1050
     Execute Adb Shell                              input tap 1600 1060
     Execute Adb Shell                              input tap 1600 1070
-    sleep    2s
+    sleep                                          2s
 
     Execute Adb Shell                              input swipe 2400 1000 2400 0
     Execute Adb Shell                              input tap 1600 800
     Execute Adb Shell                              input tap 1600 810
     Execute Adb Shell                              input tap 1600 820
-    sleep    2s
+    sleep                                          2s
 
     Execute Adb Shell                              input swipe 2400 600 2400 0
     Execute Adb Shell                              input tap 1600 620
     Execute Adb Shell                              input tap 1600 740
     Execute Adb Shell                              input tap 1600 750
-    sleep    2s
+    sleep                                          2s
 
     Execute Adb Shell                              input tap 1250 1050
     Execute Adb Shell                              input tap 1250 1150
     Execute Adb Shell                              input tap 1250 1160
-    sleep    2s
+    sleep                                          2s
 
     Execute Adb Shell                              input tap 1250 1320
     Execute Adb Shell                              input tap 1250 1440
     Execute Adb Shell                              input tap 1250 1450
-    sleep    2s
+    sleep                                          2s
 
     Execute Adb Shell                              input swipe 2400 1000 2400 0
     Execute Adb Shell                              input tap 1600 1050
     Execute Adb Shell                              input tap 1600 1100
     Execute Adb Shell                              input tap 1600 1150
-    sleep    2s
+    sleep                                          2s
     Capture Page Screenshot
     WaitAndClick                                   ${TXT_SECTION5['${ENV}']}
 
@@ -384,9 +384,9 @@ QuestionnaireTaxMobile
 
 UnitHolder
     Execute Adb Shell                              input swipe 500 500 500 0
-    WaitAndClick    xpath=//android.widget.TextView[@text='ข้อมูลผู้ถือหน่วยลงทุน']
+    WaitAndClick                                   xpath=//android.widget.TextView[@text='ข้อมูลผู้ถือหน่วยลงทุน']
     # WaitAndClick                                   ${TXT_SECTION7['${ENV}']}
-    WaitAndClick    xpath=//android.widget.TextView[@text='สถานที่ทำงาน']
+    WaitAndClick                                   xpath=//android.widget.TextView[@text='สถานที่ทำงาน']
     Execute Adb Shell                              input swipe 2400 400 2400 1600
     WaitAndInput                                   xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.EditText[1]                                                                                                                         AAAAAAAAAA
     WaitAndInput                                   xpath=//android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.EditText[2]                                                                                                                         QA
@@ -418,6 +418,7 @@ UnitHolder
     Execute Adb Shell                              input tap 1000 620
     Execute Adb Shell                              input text AAAA%sBBBB
 
+    WaitAndClick                                   xpath=//android.widget.TextView[@text='ที่อยู่ปัจจุบันผู้เอาประกันภัย']
     Execute Adb Shell                              input tap 1000 850
     Execute Adb Shell                              input text 25
 
@@ -427,17 +428,20 @@ UnitHolder
 
     Execute Adb Shell                              input tap 1800 1230
     Execute Adb Shell                              input text 0894444835
-    sleep                                          5s
-
-    WaitAndClick    xpath=//android.widget.TextView[@text='ข้อมูลผู้ถือหน่วยลงทุน']
+    WaitAndClick                                   xpath=//android.widget.TextView[@text='ข้อมูลผู้ถือหน่วยลงทุน']
     # WaitAndClick                                   ${TXT_SECTION7['${ENV}']}
 
 SuitabilityTest
-    WaitAndClick    xpath=//android.widget.TextView[@text='แบบประเมินความเสี่ยง']
-    WaitAndClick    xpath=//android.view.View[2]/android.view.View[1]/android.view.View[2]/android.view.View[9]/android.view.View[2]/android.widget.TextView[@text='แบบประเมินความเสี่ยง']
+    WaitAndClick                                   xpath=//android.widget.TextView[@text='แบบประเมินความเสี่ยง']
+    Execute Adb Shell                              input tap 200 1150
     sleep    5s
+    Execute Adb Shell                              input tap 2000 750
+    Execute Adb Shell                              input tap 1000 1250
+    Execute Adb Shell                              input swipe 2400 800 2400 0
+    Execute Adb Shell                              input tap 1000 650
+    Execute Adb Shell                              input tap 1000 1100
     Capture Page Screenshot
-    WaitAndClick    xpath=//android.widget.TextView[@text='แบบประเมินความเสี่ยง']
+    WaitAndClick                                   xpath=//android.widget.TextView[@text='แบบประเมินความเสี่ยง']
 
 SelectDropDownUnit
     Execute Adb Shell                              input tap 1000 600
