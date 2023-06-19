@@ -1,7 +1,7 @@
 *** Variables ***
 ${URL_UAT}                                                                    https://staging.tokiomarinelife.co.th/oneanddone_uat/Client/index.html
 ${URL_RV}                                                                     https://staging.tokiomarinelife.co.th/oneanddone_rv/Client/index.html
-${timeout}                                                                    30s
+${timeout}                                                                    1m
 ${SAFARI}                                                                     safari
 ${CHROME}                                                                     chrome
 ${DISCLAIMER}                                                                 Disclaimer

@@ -18,3 +18,4 @@ ApplicationMobile
     QuestionnaireTaxMobile
     UnitHolder
     SuitabilityTest
+    Fund
