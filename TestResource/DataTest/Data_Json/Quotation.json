@@ -20,24 +20,18 @@
         "Occupation": ""
     },
     "Insured": {
-        "Contract": "",
         "Basiclist": "",
-        "SelectBasiclist": "",
         "Suminsured": ""
     },
-    "Quiz": {
-        "QuizFromNo": "",
-        "QuizFromNo1": "",
-        "QuizFromNo2": "",
-        "QuizFromNo3": "",
-        "QuizFromNo4": "",
-        "QuizFromNo5": "",
-        "QuizFromNo6": "",
-        "QuizFromNo7": "",
-        "QuizFromNo8": "",
-        "QuizFromNo9": "",
-        "QuizFromNo10": "",
-        "QuizFromNo11": "",
-        "QuizFromNo12": ""
-    }
+    "Suitablitytest": {
+        "Choice": "",
+        "Answer1": "",
+        "Answer2": "",
+        "Answer3": ""
+    },
+    "Investment": {
+        "Choice": "",
+        "Fund": ""
+    },
+    "Contract": ""
 }

@@ -1,5 +1,4 @@
 *** Settings ***
-Library           AppiumLibrary
 Library           Collections
 Library           String
 Library           BuiltIn
@@ -12,16 +11,16 @@ Resource          ../Variables/LocalConfig.robot
 Resource          ../Variables/MobileConfig.robot
 Resource          Common_Keyword/ExcelKeyword.robot
 Resource          Common_Keyword/CommonKeyword.robot
-Resource          Web_Keyword/WebKeyword.robot
-Resource          Web_Keyword/LoginKeyword.robot
-Resource          Web_Keyword/HomeKeyword.robot
-Resource          Web_Keyword/QuotationKeyword.robot
-Resource          Web_Keyword/ApplicationKeyword.robot
-Resource          Web_Keyword/PrepareDataKeyword.robot
 Resource          Mobile_Keyword/MobilerepareDataKeyword.robot
-Resource          Mobile_Keyword/MobileCommonKeyword.robot
-Resource          Mobile_Keyword/MobileLoginKeyword.robot
-Resource          Mobile_Keyword/MobileQuotataionKeyword.robot
-Resource          Mobile_Keyword/MobileApplication.robot
-Resource          Mobile_Keyword/MobilePayment.robot
+Resource          Mobile_Keyword/mCommonKeyword.robot
+Resource          Mobile_Keyword/mLandingPageKeyword.robot
+Resource          Mobile_Keyword/mLoginPageKeyword.robot
+Resource          Mobile_Keyword/mPinPageKeyword.robot
+Resource          Mobile_Keyword/mMenuPageKeyword.robot
+Resource          Mobile_Keyword/mQuotataionPageKeyword.robot
+Resource          Mobile_Keyword/mApplicationPageKeyword.robot
+Resource          Mobile_Keyword/mMedicalhistoryPageKeyword.robot
+Resource          Mobile_Keyword/mPaymentPageKeyword.robot
+Resource          Mobile_Keyword/mSignPageKeyword.robot
 Resource          Mobile_Keyword/MobileFlow.robot
+Resource          Mobile_Keyword/MobileFlowE2EKeyword.robot

@@ -4,30 +4,13 @@
             "GalaxyTabS6": [
                 {
                     "platformName": "Android",
-                    "platformVersion": "11",
+                    "platformVersion": "12",
                     "deviceName": "R52M80XH5TV",
                     "automationName": "UiAutomator2",
-                    "IPAppium": "localhost:4723",
+                    "IPAppium": "127.0.0.1:4723",
                     "appPackage": "com.tokiomarine.fasttrack.ilp",
                     "appActivity": "com.tokiomarine.fasttrack.MainActivity",
                     "noReset": "false",
-                    "unicodeKeyboard": "true",
-                    "newCommandTimeout": "3000",
-                    "deviceStatus": "Online"
-                }
-            ]
-        },
-        {
-            "GalaxyTabS6Lite": [
-                {
-                    "platformName": "Android",
-                    "platformVersion": "11",
-                    "deviceName": "R52N70B1R9B",
-                    "automationName": "UiAutomator2",
-                    "IPAppium": "localhost:4723",
-                    "appPackage": "com.tokiomarine.fasttrack.sp5n",
-                    "appActivity": "com.tokiomarine.fasttrack.MainActivity",
-                    "noReset": "true",
                     "unicodeKeyboard": "true",
                     "newCommandTimeout": "3000",
                     "deviceStatus": "Online"
@@ -42,12 +25,30 @@
                     "deviceName": "emulator-5554",
                     "automationName": "UiAutomator2",
                     "IPAppium": "localhost:4723",
-                    "appPackage": "com.tokiomarine.fasttrack.gb",
+                    "appPackage": "com.tokiomarine.fasttrack.ilp",
                     "appActivity": "com.tokiomarine.fasttrack.MainActivity",
                     "noReset": "false",
                     "unicodeKeyboard": "true",
                     "newCommandTimeout": "3000",
                     "deviceStatus": "Online"
+                }
+            ]
+        },
+        {
+            "Ipad9": [
+                {
+                    "platformName": "iOS",
+                    "platformVersion": "15.5",
+                    "deviceName": "iPad (9th generation)",
+                    "automationName": "XCUITest",
+                    "IPAppium": "localhost:4723",
+                    "UDID": "93F60576-A01B-4FB8-8EB7-206B2196F11E",
+                    "app": "th.co.tokiomarinelife.fasttrack.ent.ilp",
+                    "noReset": "false",
+                    "unicodeKeyboard": "true",
+                    "newCommandTimeout": "3000",
+                    "deviceStatus": "Online",
+                    "autoAcceptAlerts": "true"
                 }
             ]
         }
